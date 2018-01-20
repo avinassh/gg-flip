@@ -1,0 +1,13 @@
+function signFlip(num) {
+    switch (num) {
+        {{ range $i, $e := . }}
+        case {{ $i }}:
+            return {{ flip $i }};
+
+        case {{ flip $i }}:
+            return {{ $i }};
+        {{ end }}
+        default:
+            return num-num*2;
+    }
+}
