@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+  <div id="chart_div"></div>
+  <script type="text/javascript">
+    google.charts.load('current', {packages: ['corechart', 'bar']});
+    google.charts.setOnLoadCallback(drawBasic);
+
+    function drawBasic() {
+          var data = google.visualization.arrayToDataTable([
+            ['Operation', 'Signs Flipped',],
+            ['Sign Flip - Usual', 81],
+            ['Sign Flip - Minimal approach', 3792],
+            ['GG Flip (on low memory)', 5892],
+            ['GG Flip', 9792],
+          ]);
+          var options = {
+            chartArea: {width: '50%'},
+            hAxis: {
+              title: 'Signs Flipped per second',
+              minValue: 0
+            },
+            vAxis: {
+              title: 'Operation'
+            }
+          };
+          var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+          chart.draw(data, options);
+        }
+  </script>
+</body>
+</html>
