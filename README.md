@@ -51,7 +51,7 @@ Thanks to V8 and their clever switch block optimizations, the above code becomes
 
 ![performance-report2](perf2.png)
 
-Even in low memory environments (old computers, mobile devices, internet explorer), GG Flip performs almost twice as fast compared to the minimal approach and in the usual environments, it's almost 10x faster than the usual method and 4x faster than the minimal approach.
+Even in low memory environments (old computers, mobile devices, internet explorer), GG Flip performs almost twice as fast compared to the minimal approach and in the usual environments, it's almost 10x faster than the usual method and 4x faster than the minimal approach. Currently, GG Flip works only with the integers and for floats, it fallbacks to default switch case. In the next version, I will include all the float numbers, so that for floats also the performance remains same.
 
 The final lib size is few GBs, so distribution may become a problem. But I am talking with popular CDN providers like Google, Cloudflare etc to ship this library directly. I am planning to send a PR to Javascript with this library so that GG Flip comes as a standard library as part of the glorious language.
 
