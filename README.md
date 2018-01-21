@@ -17,7 +17,8 @@ But as you can see, in today's webscale world flipping ~4000 signs per second wo
 GG Flip is a Golang library which generates the Javascript sign flip library. I preferred Go because lack of generics seemed like a good design choice. This code has no external dependencies, you can run:
 
 ```
-go get github.com/avinassh/gg-flip
+git clone https://github.com/avinassh/gg-flip.git
+cd gg-flip
 go run main.go
 ```
 
