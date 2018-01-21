@@ -1,8 +1,8 @@
 # GG Flip
 
-Donald Knuth described in one of his TAOCP books that flipping the sign of a number is one of the hardest problems in Computer Science. But that was in the 60s. Thanks to years of research and after numerous publications, today have some interesting ways to do the same. Consider this: 
+Donald Knuth described in one of his TAOCP books that flipping the sign of a number is one of the hardest problems in Computer Science. But that was in the 60s. Thanks to years of research and after numerous publications, today have some interesting ways to do the same. Consider this:
 
-```
+```javascript
 x = 5
 // get -5
 x -= x*2;
@@ -23,7 +23,7 @@ go run main.go
 
 Above code generates highly readable file `lib.js`, which is:
 
-```
+```javascript
 function signFlip(num) {
     switch (num) {
         case 0:
