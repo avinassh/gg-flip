@@ -19,7 +19,7 @@ func main() {
 	}
 	f, err := os.Create("lib.js")
 	t := template.Must(template.New("template.txt").Funcs(funcMap).ParseFiles("template.txt"))
-	err = t.Execute(f, make([]struct{}, 9007199254740991))
+	err = t.Execute(f, make([]struct{}, 9007199254740992))
 	if err != nil {
 		log.Fatalln(err)
 	}
