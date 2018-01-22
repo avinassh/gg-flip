@@ -12,7 +12,7 @@ Above is one of the simplest and most efficient ways to flip the sign of a numbe
 
 ![performance-report](perf.png)
 
-But as you can see, in today's webscale world flipping ~4000 signs per second wouldn't cut it. I started to look into the ways to improve it and started reading the code of V8 engine. My C is rusty, but I was able to read through most of the code and understand it. Turns out V8 highly optimises the switch blocks and they are way too fast compared to any other control statements. I decided to make use of this and implement a better sign flip. GG Flip is the result.
+But as you can see, in today's webscale world flipping ~4000 signs per second wouldn't cut it. I started to look into the ways to improve it and started reading the code of V8 engine. My C is rusty, but I was able to read through most of the code and understand it. Turns out V8 highly optimises the switch blocks and they are faster compared to any other control statements. I decided to make use of this and implement a better sign flip. GG Flip is the result.
 
 GG Flip is a Golang library which generates the Javascript sign flip library. I preferred Go because lack of generics seemed like a good design choice. This code has no external dependencies, you can run:
 
